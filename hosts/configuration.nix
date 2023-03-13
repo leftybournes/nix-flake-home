@@ -18,6 +18,7 @@
 
   zramSwap.enable = true;
   networking.networkmanager.enable = true;
+  sound.enable = false;
 
   time.timeZone = "Asia/Manila";
   i18n.defaultLocale = "en_US.UTF-8";
