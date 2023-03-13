@@ -22,6 +22,8 @@
   time.timeZone = "Asia/Manila";
   i18n.defaultLocale = "en_US.UTF-8";
 
+  security.rtkit.enable = true;
+
   services = {
     flatpak.enable = true;
     dbus.packages = with pkgs; [ gnome2.GConf ];
