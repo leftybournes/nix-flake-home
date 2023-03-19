@@ -9,9 +9,22 @@
     stateVersion = "22.11";
 
     packages = with pkgs; [
+      cargo
       chezmoi
+      clippy
+      docker
+      elixir_1_14
       fd
+      flatpak-builder
+      php
+      php81Packages.composer
+      python3
+      python3Packages.pip
+      nodejs
       ripgrep
+      ruby_3_1
+      rustc
+      rust-analyzer
       unzip
       vlc
       zip
