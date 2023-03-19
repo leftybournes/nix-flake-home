@@ -12,11 +12,12 @@
   outputs = inputs @ { self, nixpkgs, home-manager, ... }:
     let
       user = "vader";
+      username = "Anakin Skywalker";
     in {
       nixosConfigurations = (
         import ./hosts {
 	        inherit (nixpkgs) lib;
-	        inherit inputs nixpkgs home-manager user;
+	        inherit inputs nixpkgs home-manager user username;
 	      }
       );
     };

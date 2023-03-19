@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, home-manager, user }:
+{ lib, inputs, nixpkgs, home-manager, user, username }:
 
 let
   system = "x86_64-linux";
@@ -12,7 +12,7 @@ in {
   death-star = lib.nixosSystem {
     inherit system;
     specialArgs = {
-      inherit inputs user;
+      inherit inputs user username;
       host = {
         hostName = "death-star";
       };
