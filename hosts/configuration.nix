@@ -87,12 +87,25 @@
 
     systemPackages = with pkgs; [
       git
-      emacs-gtk
+      emacs
       gnome.gnome-tweaks
       gnome.gnome-themes-extra
       neovim
       #   wget
     ];
+
+    gnome.excludePackages = (with pkgs; [
+        gnome-connections
+        gnome-photos
+    ]) ++ (with pkgs.gnome; [
+        cheese
+        epiphany
+        geary
+        gnome-maps
+        gnome-music
+        gnome-software
+        totem
+    ]);
   };
 
   virtualisation.docker = {
