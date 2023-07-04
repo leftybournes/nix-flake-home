@@ -87,7 +87,7 @@
 
     systemPackages = with pkgs; [
       git
-      emacs
+      emacs-gtk
       gnome.gnome-tweaks
       gnome.gnome-themes-extra
       neovim
