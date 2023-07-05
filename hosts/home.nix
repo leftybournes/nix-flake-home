@@ -12,21 +12,20 @@
       cargo
       chezmoi
       clippy
-      elixir_1_14
       docker-compose
+      elixir
       fd
       flatpak-builder
       php
-      php81Packages.composer
+      phpPackages.composer
       python3
       python3Packages.pip
       nodejs
       ripgrep
-      ruby_3_1
+      ruby
       rustc
       rust-analyzer
       unzip
-      vlc
       zip
     ];
   };
