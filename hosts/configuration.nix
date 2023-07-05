@@ -91,7 +91,7 @@
       gnome.gnome-tweaks
       gnome.gnome-themes-extra
       neovim
-      #   wget
+      # wget
     ];
 
     gnome.excludePackages = (with pkgs; [
@@ -108,13 +108,9 @@
     ]);
   };
 
-  virtualisation.docker = {
-    enable = true;
-    storageDriver = "btrfs";
-    rootless = {
+  virtualisation.podman = {
       enable = true;
-      setSocketVariable = true;
-    };
+      dockerCompat = true;
   };
 
   system.stateVersion = "23.05";

@@ -12,8 +12,8 @@
       cargo
       chezmoi
       clippy
-      docker
       elixir_1_14
+      docker-compose
       fd
       flatpak-builder
       php
