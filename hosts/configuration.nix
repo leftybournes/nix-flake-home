@@ -87,7 +87,7 @@
 
     systemPackages = with pkgs; [
       git
-      emacs
+      emacs29-pgtk
       gnome.gnome-tweaks
       gnome.gnome-themes-extra
       neovim
@@ -108,9 +108,12 @@
     ]);
   };
 
-  virtualisation.podman = {
+  virtualisation = {
+    libvirtd.enable = true;
+    podman = {
       enable = true;
       dockerCompat = true;
+    };
   };
 
   system.stateVersion = "23.05";
