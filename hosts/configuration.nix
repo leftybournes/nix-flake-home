@@ -75,10 +75,14 @@
   hardware = {
     pulseaudio.enable = false;
 
-    opengl.extraPackages = with pkgs; [
-      rocm-opencl-icd
-      amdvlk
-    ];
+    opengl = {
+      driSupport = true;
+      driSupport32Bit = true;
+
+      extraPackages = with pkgs; [
+        amdvlk
+      ];
+    };
   };
 
   environment = {
