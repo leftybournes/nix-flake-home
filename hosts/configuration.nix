@@ -66,7 +66,7 @@
   fonts = {
     fontDir.enable = true;
 
-    fonts = with pkgs; [
+    packages = with pkgs; [
       cantarell-fonts
       source-code-pro
     ];
