@@ -41,5 +41,38 @@ in {
       }
     ];
   };
+
+  executor = lib.nixosSystem {
+    inherit system;
+    specialArgs = {
+      inherit inputs user username;
+      host = {
+        hostName = "executor";
+      };
+    };
+
+    modules = [
+      ./executor
+      ./configuration.nix
+      ./flatpak.nix
+
+      home-manager.nixosModules.home-manager {
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        home-manager.extraSpecialArgs = {
+          inherit user;
+          host = {
+            hostName = "executor";
+          };
+        };
+
+        home-manager.users.${user} = {
+      	  imports = [
+            ./home.nix
+	        ];
+        };
+      }
+    ];
+  };
 }
   
