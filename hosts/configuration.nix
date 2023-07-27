@@ -53,7 +53,7 @@
   users.users.${user} = {
     isNormalUser = true;
     description = "${username}";
-    extraGroups = [ "wheel" "networkmanager" "docker" ];
+    extraGroups = [ "wheel" "networkmanager" ];
     shell = pkgs.fish;
   };
 
