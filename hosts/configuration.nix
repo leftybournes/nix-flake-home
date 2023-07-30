@@ -29,6 +29,7 @@
     flatpak.enable = true;
     dbus.packages = with pkgs; [ gnome2.GConf ];
     udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+    tailscale.enable = true;
 
     xserver = {
       enable = true;
@@ -114,6 +115,8 @@
 
   virtualisation = {
     libvirtd.enable = true;
+    waydroid.enable = true;
+    lxd.enable = true;
     podman = {
       enable = true;
       dockerCompat = true;
