@@ -11,7 +11,6 @@
     packages = with pkgs; [
       # cli tools
       chezmoi
-      docker-compose
       elixir
       elixir_ls
       fd

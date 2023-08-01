@@ -54,7 +54,7 @@
   users.users.${user} = {
     isNormalUser = true;
     description = "${username}";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "docker" ];
     shell = pkgs.fish;
   };
 
@@ -117,9 +117,14 @@
     libvirtd.enable = true;
     waydroid.enable = true;
     lxd.enable = true;
-    podman = {
+    docker = {
       enable = true;
-      dockerCompat = true;
+      storageDriver = "btrfs";
+
+      rootless = {
+        enable = true;
+        setSocketVariable = true;
+      };
     };
   };
 
