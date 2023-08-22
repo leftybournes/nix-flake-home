@@ -96,8 +96,8 @@
       emacs29-pgtk
       gnome.gnome-tweaks
       gnome.gnome-themes-extra
-      neovim
-      # wget
+      vim
+      wget
     ];
 
     gnome.excludePackages = (with pkgs; [

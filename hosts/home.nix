@@ -11,11 +11,13 @@
     packages = with pkgs; [
       # cli tools
       chezmoi
+      dart-sass
       elixir
       elixir_ls
       fd
       flatpak-builder
       hugo
+      imagemagick
       php
       phpactor
       phpPackages.composer
