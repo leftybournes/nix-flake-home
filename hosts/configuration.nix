@@ -26,10 +26,11 @@
   security.rtkit.enable = true;
 
   services = {
-    flatpak.enable = true;
     dbus.packages = with pkgs; [ gnome2.GConf ];
-    udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+    flatpak.enable = true;
     tailscale.enable = true;
+    syncthing.enable = true;
+    udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
 
     xserver = {
       enable = true;
