@@ -29,13 +29,11 @@
     dbus.packages = with pkgs; [ gnome2.GConf ];
     flatpak.enable = true;
     tailscale.enable = true;
-    syncthing.enable = true;
     udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
 
-    xserver = {
-      enable = true;
-      desktopManager.gnome.enable = true;
-      displayManager.gdm.enable = true;
+    gnome = {
+      core-developer-tools.enable = true;
+      gnome-keyring.enable = true;
     };
 
     pipewire = {
@@ -46,9 +44,17 @@
       wireplumber.enable = true;
     };
 
-    gnome = {
-      core-developer-tools.enable = true;
-      gnome-keyring.enable = true;
+    syncthing = {
+      enable = true;
+      user = "${user}";
+      dataDir = "/home/${user}/Sync";
+      configDir = "/home/${user}/.config/syncthing";
+    };
+
+    xserver = {
+      enable = true;
+      desktopManager.gnome.enable = true;
+      displayManager.gdm.enable = true;
     };
   };
 
