@@ -6,8 +6,6 @@
 
 {
   boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
-
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
@@ -16,8 +14,16 @@
     plymouth.enable = true;
   };
 
+  networking = {
+    networkmanager.enable = true;
+
+    firewall = {
+      allowedTCPPorts = [7236 7250];
+      allowedUDPPorts = [7236 5363];
+    };
+  };
+
   zramSwap.enable = true;
-  networking.networkmanager.enable = true;
   sound.enable = false;
 
   time.timeZone = "Asia/Manila";
