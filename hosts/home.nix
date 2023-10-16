@@ -10,6 +10,7 @@
 
     packages = with pkgs; [
       # cli tools
+      gcc
       chezmoi
       dart-sass
       elixir
@@ -31,16 +32,8 @@
       zip
       zola
 
-      # desktop apps
+      # gui
       adw-gtk3
-      amberol
-      celluloid
-      fragments
-      gnome-builder
-      gnome-connections
-      gnome-podcasts
-      mpv
-      virt-manager
 
       # rust
       cargo
