@@ -13,20 +13,22 @@
       gcc
       chezmoi
       dart-sass
-      elixir
+      elixir_1_15
       elixir_ls
       fd
       flatpak-builder
       hugo
       imagemagick
-      php
+      php82
       phpactor
-      phpPackages.composer
-      python3
-      python3Packages.pip
-      nodejs
+      php82Packages.composer
+      podman
+      python311
+      python311Packages.pip
+      nodejs_20
       ripgrep
-      ruby
+      ruby_3_2
+      rubyPackages_3_2.solargraph
       unzip
       yt-dlp
       zip
