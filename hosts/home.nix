@@ -22,7 +22,6 @@
       php82
       phpactor
       php82Packages.composer
-      podman
       python311
       python311Packages.pip
       nodejs_20

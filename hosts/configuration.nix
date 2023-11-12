@@ -80,7 +80,8 @@
   fonts = {
     fontDir.enable = true;
 
-    packages = with pkgs; [
+    # packages = with pkgs; [ # Use this when migrating to 23.11
+    fonts = with pkgs; [
       cantarell-fonts
       source-code-pro
     ];
@@ -113,16 +114,16 @@
     ];
 
     gnome.excludePackages = (with pkgs; [
-        gnome-connections
-        gnome-photos
+      gnome-connections
+      gnome-photos
     ]) ++ (with pkgs.gnome; [
-        cheese
-        epiphany
-        geary
-        gnome-maps
-        gnome-music
-        gnome-software
-        totem
+      cheese
+      epiphany
+      geary
+      gnome-maps
+      gnome-music
+      gnome-software
+      totem
     ]);
   };
 
