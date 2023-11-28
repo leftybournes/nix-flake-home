@@ -80,8 +80,7 @@
   fonts = {
     fontDir.enable = true;
 
-    # packages = with pkgs; [ # Use this when migrating to 23.11
-    fonts = with pkgs; [
+    packages = with pkgs; [
       cantarell-fonts
       source-code-pro
     ];
