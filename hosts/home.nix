@@ -6,7 +6,7 @@
   home = {
     username = "${user}";
     homeDirectory = "/home/${user}";
-    stateVersion = "23.05";
+    stateVersion = "24.05";
 
     packages = with pkgs; [
       # cli tools
