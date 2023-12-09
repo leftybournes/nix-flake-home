@@ -18,8 +18,14 @@
     networkmanager.enable = true;
 
     firewall = {
-      allowedTCPPorts = [7236 7250];
-      allowedUDPPorts = [7236 5363];
+      # TCP Ports
+      # - 7236 and 7250 for GNOME NetworkDisplays
+      # - 1900 for GNOME Media Sharing (rygel)
+      # UDP Ports
+      # - 7236 and 5363 for GNOME NetworkDisplays
+      # - 1900 for GNOME Media Sharing (rygel)
+      allowedTCPPorts = [7236 7250 1900];
+      allowedUDPPorts = [7236 5363 1900];
     };
   };
 
