@@ -10,13 +10,14 @@
 
     packages = with pkgs; [
       # cli tools
-      gcc
+      blueprint-compiler
       chezmoi
       dart-sass
       elixir_1_15
       elixir_ls
       fd
       flatpak-builder
+      gcc
       hugo
       imagemagick
       php82
