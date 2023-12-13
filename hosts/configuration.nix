@@ -59,8 +59,8 @@
     syncthing = {
       enable = true;
       user = "${user}";
-      dataDir = "/home/${user}/Sync";
       configDir = "/home/${user}/.config/syncthing";
+      dataDir = "/home/${user}/.config/synthing/db";
     };
 
     xserver = {
