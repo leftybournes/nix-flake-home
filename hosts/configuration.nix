@@ -56,13 +56,6 @@
       wireplumber.enable = true;
     };
 
-    syncthing = {
-      enable = true;
-      user = "${user}";
-      configDir = "/home/${user}/.config/syncthing";
-      dataDir = "/home/${user}/.config/synthing/db";
-    };
-
     xserver = {
       enable = true;
       desktopManager.gnome.enable = true;
