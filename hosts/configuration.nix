@@ -116,6 +116,7 @@
       gnome.gnome-themes-extra
       vim
       wget
+      wl-clipboard
     ];
 
     gnome.excludePackages = (with pkgs; [
