@@ -14,6 +14,7 @@
             user = "vader";
             username = "Anakin Skywalker";
         in {
+            formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
             nixosConfigurations = (
                 import ./hosts {
                     inherit (nixpkgs) lib;
