@@ -8,7 +8,8 @@ let
   };
 
   lib = nixpkgs.lib;
-in {
+in
+{
   death-star = lib.nixosSystem {
     inherit system;
     specialArgs = {
@@ -23,7 +24,8 @@ in {
       ./configuration.nix
       ./flatpak.nix
 
-      home-manager.nixosModules.home-manager {
+      home-manager.nixosModules.home-manager
+      {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = {
@@ -34,9 +36,9 @@ in {
         };
 
         home-manager.users.${user} = {
-      	  imports = [
+          imports = [
             ./home.nix
-	        ];
+          ];
         };
       }
     ];
@@ -56,7 +58,8 @@ in {
       ./configuration.nix
       ./flatpak.nix
 
-      home-manager.nixosModules.home-manager {
+      home-manager.nixosModules.home-manager
+      {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = {
@@ -67,9 +70,9 @@ in {
         };
 
         home-manager.users.${user} = {
-      	  imports = [
+          imports = [
             ./home.nix
-	        ];
+          ];
         };
       }
     ];

@@ -24,8 +24,8 @@
       # UDP Ports
       # - 7236 and 5363 for GNOME NetworkDisplays
       # - 1900 for GNOME Media Sharing (rygel)
-      allowedTCPPorts = [7236 7250 1900];
-      allowedUDPPorts = [7236 5363 1900];
+      allowedTCPPorts = [ 7236 7250 1900 ];
+      allowedUDPPorts = [ 7236 5363 1900 ];
     };
   };
 
