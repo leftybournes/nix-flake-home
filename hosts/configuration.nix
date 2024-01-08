@@ -79,10 +79,7 @@
   fonts = {
     fontDir.enable = true;
 
-    packages = with pkgs; [
-      cantarell-fonts
-      source-code-pro
-    ];
+    packages = with pkgs; [ cantarell-fonts source-code-pro ];
   };
 
   hardware = {
@@ -92,9 +89,7 @@
       driSupport = true;
       driSupport32Bit = true;
 
-      extraPackages = with pkgs; [
-        amdvlk
-      ];
+      extraPackages = with pkgs; [ amdvlk ];
     };
   };
 
@@ -113,18 +108,16 @@
       wl-clipboard
     ];
 
-    gnome.excludePackages = (with pkgs; [
-      gnome-connections
-      gnome-photos
-    ]) ++ (with pkgs.gnome; [
-      cheese
-      epiphany
-      geary
-      gnome-maps
-      gnome-music
-      gnome-software
-      totem
-    ]);
+    gnome.excludePackages = (with pkgs; [ gnome-connections gnome-photos ])
+      ++ (with pkgs.gnome; [
+        cheese
+        epiphany
+        geary
+        gnome-maps
+        gnome-music
+        gnome-software
+        totem
+      ]);
   };
 
   virtualisation = {
@@ -143,8 +136,6 @@
 
   system.stateVersion = "24.05";
 
-  nix = {
-    settings.experimental-features = [ "nix-command" "flakes" ];
-  };
+  nix = { settings.experimental-features = [ "nix-command" "flakes" ]; };
 }
 
