@@ -107,6 +107,7 @@
       emacs29-pgtk
       gnome.gnome-tweaks
       gnome.gnome-themes-extra
+      nixfmt
       vim
       wget
       wl-clipboard
