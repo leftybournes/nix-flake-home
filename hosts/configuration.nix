@@ -12,6 +12,7 @@
     };
 
     plymouth.enable = true;
+    extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
   };
 
   networking = {
