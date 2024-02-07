@@ -104,7 +104,7 @@
       gnome.gnome-tweaks
       gnome.gnome-themes-extra
       nixfmt
-      vim
+      neovim
       wget
       wl-clipboard
     ];
