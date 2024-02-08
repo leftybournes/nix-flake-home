@@ -10,33 +10,39 @@
 
     packages = with pkgs; [
       # cli tools
-      blueprint-compiler
       chezmoi
-      dart-sass
-      elixir_1_15
-      elixir_ls
       fd
       flatpak-builder
-      gcc
-      hugo
       imagemagick
-      php82
-      phpactor
-      php82Packages.composer
-      python311
-      python311Packages.pip
-      nodejs_20
       ripgrep
-      ruby_3_2
-      rubyPackages_3_2.solargraph
       sqlite
       unzip
       yt-dlp
       zip
+
+      # theme
+      adw-gtk3
+
+      # static site generators
+      hugo
       zola
 
-      # gui
-      adw-gtk3
+      # elixir
+      elixir_1_15
+      elixir_ls
+
+      # php
+      php82
+      phpactor
+      php82Packages.composer
+
+      # python
+      python311
+      python311Packages.pip
+
+      # ruby
+      ruby_3_2
+      rubyPackages_3_2.solargraph
 
       # rust
       cargo
@@ -44,6 +50,12 @@
       rustc
       rustfmt
       rust-analyzer
+
+      # other dev tools
+      blueprint-compiler
+      dart-sass
+      gcc
+      nodejs_20
     ];
   };
 }
