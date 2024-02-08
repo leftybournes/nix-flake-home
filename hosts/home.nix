@@ -51,6 +51,10 @@
       rustfmt
       rust-analyzer
 
+      # lua
+      lua
+      lua-language-server
+
       # other dev tools
       blueprint-compiler
       dart-sass
