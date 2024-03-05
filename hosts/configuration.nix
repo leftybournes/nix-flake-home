@@ -137,6 +137,16 @@
 
   system.stateVersion = "24.05";
 
-  nix = { settings.experimental-features = [ "nix-command" "flakes" ]; };
-}
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than +5";
+    };
 
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = [ "nix-command" "flakes" ];
+    };
+  };
+}
