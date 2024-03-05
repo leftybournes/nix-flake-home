@@ -10,6 +10,7 @@
 
     packages = with pkgs; [
       # cli tools
+      bottom
       chezmoi
       fd
       flatpak-builder
