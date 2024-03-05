@@ -29,21 +29,22 @@
       zola
 
       # elixir
-      elixir_1_15
+      elixir_1_16
       elixir_ls
 
       # php
-      php82
+      php83
       phpactor
-      php82Packages.composer
+      php83Packages.composer
 
       # python
-      python311
-      python311Packages.pip
+      python312
+      python312Packages.pip
+      python312Packages.jedi-language-server
 
       # ruby
-      ruby_3_2
-      rubyPackages_3_2.solargraph
+      ruby_3_3
+      rubyPackages_3_3.solargraph
 
       # rust
       cargo
