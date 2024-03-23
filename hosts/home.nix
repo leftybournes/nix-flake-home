@@ -32,6 +32,10 @@
       elixir_1_16
       elixir_ls
 
+      # golang
+      go
+      gopls
+
       # php
       php83
       phpactor
