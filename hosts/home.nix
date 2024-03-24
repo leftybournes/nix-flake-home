@@ -64,6 +64,7 @@
       # other dev tools
       blueprint-compiler
       dart-sass
+      docker-compose
       gcc
       nodejs_20
     ];
