@@ -17,6 +17,7 @@
       imagemagick
       ripgrep
       sqlite
+      toolbox
       unzip
       yt-dlp
       zip
@@ -31,6 +32,10 @@
       # elixir
       elixir_1_16
       elixir_ls
+
+      # lua
+      lua
+      lua-language-server
 
       # golang
       go
@@ -56,10 +61,6 @@
       rustc
       rustfmt
       rust-analyzer
-
-      # lua
-      lua
-      lua-language-server
 
       # other dev tools
       blueprint-compiler
