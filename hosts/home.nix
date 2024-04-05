@@ -67,6 +67,8 @@
       dart-sass
       docker-compose
       gcc
+      gnumake
+      pkg-config
       nodejs_20
     ];
   };
