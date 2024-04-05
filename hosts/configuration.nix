@@ -109,7 +109,8 @@
       wl-clipboard
     ];
 
-    gnome.excludePackages = (with pkgs; [ gnome-connections gnome-photos ])
+    gnome.excludePackages =
+      (with pkgs; [ gnome-connections gnome-photos gnome-builder ])
       ++ (with pkgs.gnome; [
         cheese
         epiphany
