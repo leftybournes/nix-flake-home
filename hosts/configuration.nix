@@ -103,7 +103,7 @@
       emacs29-pgtk
       gnome.gnome-tweaks
       gnome.gnome-themes-extra
-      nixfmt
+      nixfmt-rfc-style
       neovim
       wget
       wl-clipboard
