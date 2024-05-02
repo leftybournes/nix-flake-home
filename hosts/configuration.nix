@@ -22,11 +22,16 @@
       # TCP Ports
       # - 7236 and 7250 for GNOME NetworkDisplays
       # - 1900 for GNOME Media Sharing (rygel)
+      # - 27040 for Steam local network game transfers
       # UDP Ports
       # - 7236 and 5363 for GNOME NetworkDisplays
       # - 1900 for GNOME Media Sharing (rygel)
-      allowedTCPPorts = [ 7236 7250 1900 ];
+      # - 27031-27036 for Steam local network game transfers
+      allowedTCPPorts = [ 7236 7250 1900 27040 ];
       allowedUDPPorts = [ 7236 5363 1900 ];
+      allowedUDPPortRanges = [
+        { from = 27031; to = 27036; }
+      ];
     };
   };
 
