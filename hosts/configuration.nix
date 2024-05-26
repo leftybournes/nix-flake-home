@@ -122,7 +122,6 @@
         geary
         gnome-maps
         gnome-music
-        gnome-software
         totem
       ]);
   };
