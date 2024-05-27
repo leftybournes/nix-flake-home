@@ -62,6 +62,11 @@
       rustfmt
       rust-analyzer
 
+      # swift
+      swift
+      swiftPackages.swiftpm
+      sourcekit-lsp
+
       # other dev tools
       blueprint-compiler
       dart-sass
