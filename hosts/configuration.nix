@@ -23,14 +23,20 @@
       # - 7236 and 7250 for GNOME NetworkDisplays
       # - 1900 for GNOME Media Sharing (rygel)
       # - 27040 for Steam local network game transfers
+      # - 1714-1764 for GSConnect/KDE Connect
       # UDP Ports
       # - 7236 and 5363 for GNOME NetworkDisplays
       # - 1900 for GNOME Media Sharing (rygel)
       # - 27031-27036 for Steam local network game transfers
+      # - 1714-1764 for GSConnect/KDE Connect
       allowedTCPPorts = [ 7236 7250 1900 27040 ];
       allowedUDPPorts = [ 7236 5363 1900 ];
+      allowedTCPPortRanges = [
+        { from = 1714; to = 1764; }
+      ];
       allowedUDPPortRanges = [
         { from = 27031; to = 27036; }
+        { from = 1714; to = 1764; }
       ];
     };
   };
@@ -108,6 +114,7 @@
       emacs29-pgtk
       gnome.gnome-tweaks
       gnome.gnome-themes-extra
+      gnomeExtensions.gsconnect
       nixfmt-rfc-style
       neovim
       wget
