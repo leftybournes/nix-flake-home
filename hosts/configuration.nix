@@ -96,11 +96,8 @@
 
   hardware = {
     pulseaudio.enable = false;
-
-    opengl = {
-      driSupport = true;
-      driSupport32Bit = true;
-
+    graphics = {
+      enable32Bit = true;
       extraPackages = with pkgs; [ amdvlk ];
     };
   };
