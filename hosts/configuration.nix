@@ -2,7 +2,15 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, lib, pkgs, inputs, user, username, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  inputs,
+  user,
+  username,
+  ...
+}:
 
 {
   boot = {
@@ -29,14 +37,32 @@
       # - 1900 for GNOME Media Sharing (rygel)
       # - 27031-27036 for Steam local network game transfers
       # - 1714-1764 for GSConnect/KDE Connect
-      allowedTCPPorts = [ 7236 7250 1900 27040 ];
-      allowedUDPPorts = [ 7236 5363 1900 ];
+      allowedTCPPorts = [
+        7236
+        7250
+        1900
+        27040
+      ];
+      allowedUDPPorts = [
+        7236
+        5363
+        1900
+      ];
       allowedTCPPortRanges = [
-        { from = 1714; to = 1764; }
+        {
+          from = 1714;
+          to = 1764;
+        }
       ];
       allowedUDPPortRanges = [
-        { from = 27031; to = 27036; }
-        { from = 1714; to = 1764; }
+        {
+          from = 27031;
+          to = 27036;
+        }
+        {
+          from = 1714;
+          to = 1764;
+        }
       ];
     };
   };
@@ -78,7 +104,10 @@
   users.users.${user} = {
     isNormalUser = true;
     description = "${username}";
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [
+      "wheel"
+      "networkmanager"
+    ];
     shell = pkgs.fish;
   };
 
@@ -91,7 +120,10 @@
   fonts = {
     fontDir.enable = true;
 
-    packages = with pkgs; [ cantarell-fonts source-code-pro ];
+    packages = with pkgs; [
+      cantarell-fonts
+      source-code-pro
+    ];
   };
 
   hardware = {
@@ -104,13 +136,16 @@
 
   environment = {
     variables.AMD_VULKAN_ICD = "RADV";
-    shells = with pkgs; [ fish bash ];
+    shells = with pkgs; [
+      fish
+      bash
+    ];
 
     systemPackages = with pkgs; [
       git
       emacs29-pgtk
-      gnome.gnome-tweaks
-      gnome.gnome-themes-extra
+      gnome-tweaks
+      gnome-themes-extra
       gnomeExtensions.gsconnect
       nixfmt-rfc-style
       neovim
@@ -119,14 +154,18 @@
     ];
 
     gnome.excludePackages =
-      (with pkgs; [ gnome-connections gnome-photos gnome-builder ])
-      ++ (with pkgs.gnome; [
+      (with pkgs; [
+        gnome-connections
+        gnome-photos
+        gnome-builder
         cheese
         epiphany
         geary
+        totem
+      ])
+      ++ (with pkgs.gnome; [
         gnome-maps
         gnome-music
-        totem
       ]);
   };
 
@@ -150,7 +189,10 @@
 
     settings = {
       auto-optimise-store = true;
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
     };
   };
 }
