@@ -155,12 +155,13 @@
 
     gnome.excludePackages =
       (with pkgs; [
+        cheese
+        epiphany
+        evince
+        geary
         gnome-connections
         gnome-photos
         gnome-builder
-        cheese
-        epiphany
-        geary
         totem
       ])
       ++ (with pkgs.gnome; [
