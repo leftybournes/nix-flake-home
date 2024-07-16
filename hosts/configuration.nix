@@ -72,7 +72,6 @@
   };
 
   zramSwap.enable = true;
-  sound.enable = false;
 
   time.timeZone = "Asia/Manila";
   i18n.defaultLocale = "en_GB.UTF-8";
