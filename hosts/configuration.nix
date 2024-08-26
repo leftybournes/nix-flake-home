@@ -162,14 +162,12 @@
         epiphany
         evince
         geary
-        gnome-connections
-        gnome-photos
         gnome-builder
-        totem
-      ])
-      ++ (with pkgs.gnome; [
+        gnome-connections
         gnome-maps
         gnome-music
+        gnome-photos
+        totem
       ]);
   };
 
