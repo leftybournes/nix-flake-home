@@ -82,7 +82,7 @@
     dbus.packages = with pkgs; [ gnome2.GConf ];
     flatpak.enable = true;
     tailscale.enable = true;
-    udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
+    udev.packages = with pkgs; [ gnome-settings-daemon ];
 
     gnome = {
       core-developer-tools.enable = true;
