@@ -81,6 +81,7 @@
   services = {
     dbus.packages = with pkgs; [ gnome2.GConf ];
     flatpak.enable = true;
+    fwupd.enable = true;
     tailscale.enable = true;
     udev.packages = with pkgs; [ gnome-settings-daemon ];
 
