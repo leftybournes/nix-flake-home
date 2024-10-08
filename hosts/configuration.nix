@@ -150,6 +150,7 @@
       gnome-tweaks
       gnome-themes-extra
       gnomeExtensions.gsconnect
+      libheif
       nixfmt-rfc-style
       neovim
       wget
