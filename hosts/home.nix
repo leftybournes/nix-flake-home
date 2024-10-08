@@ -75,7 +75,7 @@
       gcc
       gnumake
       pkg-config
-      nodejs_20
+      nodejs_22
     ];
   };
 }
