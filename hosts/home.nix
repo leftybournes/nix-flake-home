@@ -76,6 +76,7 @@
       gnumake
       pkg-config
       nodejs_22
+      deno
     ];
   };
 }
