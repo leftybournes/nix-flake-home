@@ -59,6 +59,7 @@
       ruby_3_3
       rubyPackages_3_3.solargraph
       rubyPackages_3_3.psych
+      rubyPackages_3_3.rubocop
 
       # rust
       cargo
