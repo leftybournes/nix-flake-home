@@ -16,11 +16,15 @@
       flatpak-builder
       imagemagick
       ripgrep
-      sqlite
       toolbox
       unzip
       yt-dlp
       zip
+
+      # database tools
+      mariadb_114
+      postgresql
+      sqlite
 
       # theme
       adw-gtk3
