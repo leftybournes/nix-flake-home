@@ -34,7 +34,7 @@
       zola
 
       # elixir
-      elixir_1_16
+      elixir
       elixir_ls
 
       # lua
@@ -46,20 +46,20 @@
       gopls
 
       # php
-      php83
+      php84
       phpactor
-      php83Packages.composer
+      php84Packages.composer
 
       # python
-      python312
-      python312Packages.pip
-      python312Packages.jedi-language-server
+      python313
+      python313Packages.pip
+      python313Packages.jedi-language-server
 
       # ruby
-      ruby_3_3
-      rubyPackages_3_3.solargraph
-      rubyPackages_3_3.psych
-      rubyPackages_3_3.rubocop
+      ruby_3_4
+      rubyPackages_3_4.solargraph
+      rubyPackages_3_4.psych
+      rubyPackages_3_4.rubocop
 
       # rust
       cargo
@@ -80,7 +80,7 @@
       gcc
       gnumake
       pkg-config
-      nodejs_22
+      nodejs_23
       deno
     ];
   };
