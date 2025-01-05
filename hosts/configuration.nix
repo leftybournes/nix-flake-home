@@ -82,6 +82,7 @@
     dbus.packages = with pkgs; [ gnome2.GConf ];
     flatpak.enable = true;
     fwupd.enable = true;
+    pulseaudio.enable = false;
     tailscale.enable = true;
     udev.packages = with pkgs; [ gnome-settings-daemon ];
 
@@ -116,9 +117,9 @@
   };
 
   programs = {
-    seahorse.enable = true;
-    fish.enable = true;
     dconf.enable = true;
+    fish.enable = true;
+    seahorse.enable = true;
     nix-ld.enable = true;
   };
 
@@ -132,7 +133,6 @@
   };
 
   hardware = {
-    pulseaudio.enable = false;
     graphics = {
       enable32Bit = true;
       extraPackages = with pkgs; [ amdvlk ];
