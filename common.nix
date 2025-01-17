@@ -1,17 +1,4 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{
-  config,
-  lib,
-  pkgs,
-  inputs,
-  user,
-  username,
-  ...
-}:
-
+{ config, pkgs, lib, inputs, user, username, ... }:
 {
   boot = {
     loader = {
@@ -75,21 +62,13 @@
 
   time.timeZone = "Asia/Manila";
   i18n.defaultLocale = "en_GB.UTF-8";
-
   security.rtkit.enable = true;
 
   services = {
-    dbus.packages = with pkgs; [ gnome2.GConf ];
     flatpak.enable = true;
     fwupd.enable = true;
     pulseaudio.enable = false;
     tailscale.enable = true;
-    udev.packages = with pkgs; [ gnome-settings-daemon ];
-
-    gnome = {
-      core-developer-tools.enable = true;
-      gnome-keyring.enable = true;
-    };
 
     pipewire = {
       enable = true;
@@ -101,8 +80,6 @@
 
     xserver = {
       enable = true;
-      desktopManager.gnome.enable = true;
-      displayManager.gdm.enable = true;
     };
   };
 
@@ -112,7 +89,7 @@
     extraGroups = [
       "wheel"
       "networkmanager"
-      "${username}"
+      "${user}"
     ];
     shell = pkgs.fish;
   };
@@ -148,31 +125,88 @@
     ];
 
     systemPackages = with pkgs; [
+      # cli tools
+      bottom
+      chezmoi
+      fd
+      flatpak-builder
       git
-      emacs29-pgtk
-      gnome-tweaks
-      gnome-themes-extra
-      gnomeExtensions.gsconnect
-      libheif
-      nixfmt-rfc-style
+      imagemagick
       neovim
+      ripgrep
+      toolbox
+      unzip
       wget
       wl-clipboard
-    ];
+      yt-dlp
+      zip
 
-    gnome.excludePackages =
-      (with pkgs; [
-        cheese
-        epiphany
-        evince
-        geary
-        gnome-builder
-        gnome-connections
-        gnome-maps
-        gnome-music
-        gnome-photos
-        totem
-      ]);
+      # database tools
+      mariadb_114
+      postgresql
+      sqlite
+
+      # theme
+      adw-gtk3
+
+      # static site generators
+      hugo
+      zola
+
+      # elixir
+      elixir
+      elixir_ls
+
+      # lua
+      lua
+      lua-language-server
+
+      # golang
+      go
+      gopls
+
+      # php
+      php84
+      phpactor
+      php84Packages.composer
+
+      # python
+      python313
+      python313Packages.pip
+      python313Packages.jedi-language-server
+
+      # ruby
+      ruby_3_4
+      rubyPackages_3_4.solargraph
+      rubyPackages_3_4.psych
+      rubyPackages_3_4.rubocop
+
+      # rust
+      cargo
+      clippy
+      rustc
+      rustfmt
+      rust-analyzer
+
+      # swift
+      swift
+      swiftPackages.swiftpm
+      sourcekit-lsp
+
+      # other dev tools
+      blueprint-compiler
+      dart-sass
+      docker-compose
+      gcc
+      gnumake
+      pkg-config
+      nodejs_23
+      deno
+
+      emacs30-pgtk
+      libheif
+      nixfmt-rfc-style
+    ];
   };
 
   virtualisation = {
