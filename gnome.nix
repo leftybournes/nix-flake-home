@@ -32,7 +32,6 @@
     ];
 
     systemPackages = with pkgs; [
-      gnome-tweaks
       gnome-themes-extra
       gnomeExtensions.gsconnect
     ];
