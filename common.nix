@@ -125,14 +125,16 @@
     ];
 
     systemPackages = with pkgs; [
-      # cli tools
+      # adminstrator tools
       bottom
       chezmoi
       fd
       flatpak-builder
+      ghostty
       git
       imagemagick
       neovim
+      nixfmt-rfc-style
       ripgrep
       toolbox
       unzip
@@ -156,6 +158,9 @@
       # elixir
       elixir
       elixir_ls
+
+      # libraries
+      libheif
 
       # lua
       lua
@@ -197,15 +202,12 @@
       blueprint-compiler
       dart-sass
       docker-compose
+      emacs30-pgtk
       gcc
       gnumake
       pkg-config
       nodejs_23
       deno
-
-      emacs30-pgtk
-      libheif
-      nixfmt-rfc-style
     ];
   };
 
