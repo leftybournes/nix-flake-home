@@ -125,12 +125,11 @@
     ];
 
     systemPackages = with pkgs; [
-      # adminstrator tools
+      # administrator tools
       bottom
       chezmoi
       fd
       flatpak-builder
-      ghostty
       git
       imagemagick
       neovim
