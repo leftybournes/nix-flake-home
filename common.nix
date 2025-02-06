@@ -90,11 +90,13 @@
       "wheel"
       "networkmanager"
       "${user}"
+      "adbusers"
     ];
     shell = pkgs.fish;
   };
 
   programs = {
+    adb.enable = true;
     dconf.enable = true;
     fish.enable = true;
     seahorse.enable = true;
@@ -160,6 +162,7 @@
 
       # libraries
       libheif
+      mtpfs
 
       # lua
       lua
@@ -198,6 +201,7 @@
       sourcekit-lsp
 
       # other dev tools
+      # android-tools
       blueprint-compiler
       dart-sass
       docker-compose
