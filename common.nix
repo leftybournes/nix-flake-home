@@ -87,10 +87,11 @@
     isNormalUser = true;
     description = "${username}";
     extraGroups = [
+      "adbusers"
+      "docker"
       "wheel"
       "networkmanager"
       "${user}"
-      "adbusers"
     ];
     shell = pkgs.fish;
   };
@@ -137,7 +138,6 @@
       neovim
       nixfmt-rfc-style
       ripgrep
-      toolbox
       unzip
       wget
       wl-clipboard
@@ -204,7 +204,6 @@
       # android-tools
       blueprint-compiler
       dart-sass
-      docker-compose
       emacs30-pgtk
       gcc
       gnumake
@@ -217,10 +216,10 @@
   virtualisation = {
     containers.enable = true;
     waydroid.enable = true;
-    podman = {
+
+    docker = {
       enable = true;
-      dockerCompat = true;
-      defaultNetwork.settings.enabled = true;
+      storageDriver = "btrfs";
     };
   };
 
