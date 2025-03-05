@@ -5,7 +5,8 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = inputs @ { self, nixpkgs, ... }:
+  outputs =
+    inputs@{ self, nixpkgs, ... }:
     let
       system = "x86_64-linux";
       user = "vader";
@@ -18,7 +19,12 @@
           specialArgs = {
             # hostname = "endor";
             inherit (nixpkgs) lib;
-            inherit inputs nixpkgs user username;
+            inherit
+              inputs
+              nixpkgs
+              user
+              username
+              ;
           };
 
           inherit system;
@@ -28,13 +34,18 @@
             ./gnome.nix
             ./flatpak.nix
             ./hosts/endor
-          ];
+          ] ++ nixpkgs.lib.optional (builtins.pathExists ./extrahosts.nix) ./extrahosts.nix;
         };
-        
+
         executor = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit (nixpkgs) lib;
-            inherit inputs nixpkgs user username;
+            inherit
+              inputs
+              nixpkgs
+              user
+              username
+              ;
           };
 
           inherit system;
@@ -44,7 +55,7 @@
             ./gnome.nix
             ./flatpak.nix
             ./hosts/executor
-          ];
+          ] ++ nixpkgs.lib.optional (builtins.pathExists ./extrahosts.nix) ./extrahosts.nix;
         };
       };
     };

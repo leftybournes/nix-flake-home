@@ -1,4 +1,12 @@
-{ config, pkgs, lib, inputs, user, username, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  inputs,
+  user,
+  username,
+  ...
+}:
 {
   boot = {
     loader = {
@@ -89,8 +97,8 @@
     extraGroups = [
       "adbusers"
       "docker"
-      "wheel"
       "networkmanager"
+      "wheel"
       "${user}"
     ];
     shell = pkgs.fish;
