@@ -15,9 +15,29 @@
     {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
       nixosConfigurations = {
+        death-star = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit (nixpkgs) lib;
+            inherit
+              inputs
+              nixpkgs
+              user
+              username
+              ;
+          };
+
+          inherit system;
+
+          modules = [
+            ./common.nix
+            ./gnome.nix
+            ./flatpak.nix
+            ./hosts/death-star
+          ] ++ nixpkgs.lib.optional (builtins.pathExists ./extrahosts.nix) ./extrahosts.nix;
+        };
+
         endor = nixpkgs.lib.nixosSystem {
           specialArgs = {
-            # hostname = "endor";
             inherit (nixpkgs) lib;
             inherit
               inputs
