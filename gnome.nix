@@ -32,7 +32,9 @@
     ];
 
     systemPackages = with pkgs; [
+      adwaita-icon-theme
       gnome-themes-extra
+      gnome-tweaks
       gnomeExtensions.gsconnect
     ];
   };
