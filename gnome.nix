@@ -10,6 +10,8 @@
       gnome-keyring.enable = true;
     };
 
+    sysprof.enable = true;
+
     xserver = {
       enable = true;
       desktopManager.gnome.enable = true;
@@ -62,5 +64,4 @@
       ];
     };
   };
-
 }
