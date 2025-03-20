@@ -7,7 +7,11 @@
       mkRoSymBind = path: {
         device = path;
         fsType = "fuse.bindfs";
-        options = [ "ro" "resolve-symlinks" "x-gvfs-hide" ];
+        options = [
+          "ro"
+          "resolve-symlinks"
+          "x-gvfs-hide"
+        ];
       };
       aggregatedFonts = pkgs.buildEnv {
         name = "system-fonts";
