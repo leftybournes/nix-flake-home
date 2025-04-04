@@ -1,5 +1,5 @@
 {
-  description = "A flake for leftybournes' system";
+  description = "A flake for leftybournes' systems";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -30,8 +30,8 @@
 
           modules = [
             ./common.nix
-            ./gnome.nix
             ./flatpak.nix
+            ./gnome.nix
             ./hosts/death-star
           ] ++ nixpkgs.lib.optional (builtins.pathExists ./extrahosts.nix) ./extrahosts.nix;
         };
