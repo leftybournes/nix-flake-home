@@ -200,15 +200,15 @@
       sourcekit-lsp
 
       # other dev tools
-      # android-tools
       blueprint-compiler
       dart-sass
+      deno
+      devenv
       emacs30-pgtk
       gcc
       gnumake
-      pkg-config
       nodejs_23
-      deno
+      pkg-config
     ];
   };
 
