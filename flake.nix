@@ -30,6 +30,7 @@
 
           modules = [
             ./common.nix
+            ./podman.nix
             ./flatpak.nix
             ./gnome.nix
             ./hosts/death-star
@@ -51,6 +52,7 @@
 
           modules = [
             ./common.nix
+            ./docker.nix
             ./gnome.nix
             ./flatpak.nix
             ./hosts/endor
@@ -72,6 +74,7 @@
 
           modules = [
             ./common.nix
+            ./podman.nix
             ./gnome.nix
             ./flatpak.nix
             ./hosts/executor

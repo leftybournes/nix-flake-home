@@ -88,7 +88,6 @@
     description = "${username}";
     extraGroups = [
       "adbusers"
-      "docker"
       "networkmanager"
       "wheel"
       "${user}"
@@ -216,11 +215,6 @@
   virtualisation = {
     containers.enable = true;
     waydroid.enable = true;
-
-    docker = {
-      enable = true;
-      storageDriver = "btrfs";
-    };
   };
 
   system.stateVersion = "24.11";
