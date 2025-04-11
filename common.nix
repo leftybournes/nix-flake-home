@@ -175,6 +175,7 @@
       php84
       phpactor
       php84Packages.composer
+      symfony-cli
 
       # python
       python313
