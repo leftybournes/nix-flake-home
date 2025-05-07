@@ -208,7 +208,7 @@
       emacs30-pgtk
       gcc
       gnumake
-      nodejs_23
+      nodejs_24
       pkg-config
     ];
   };
