@@ -173,9 +173,10 @@
 
       # php
       php84
-      phpactor
       php84Packages.composer
-      symfony-cli
+      php84Extensions.xdebug
+      phpactor
+      phpunit
 
       # python
       python313
