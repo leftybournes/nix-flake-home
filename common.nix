@@ -201,6 +201,7 @@
       sourcekit-lsp
 
       # other dev tools
+      act
       blueprint-compiler
       dart-sass
       deno
