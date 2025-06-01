@@ -10,6 +10,9 @@
     dbus.packages = with pkgs; [ gnome2.GConf ];
     udev.packages = with pkgs; [ gnome-settings-daemon ];
 
+    desktopManager.gnome.enable = true;
+    displayManager.gdm.enable = true;
+
     gnome = {
       core-developer-tools.enable = true;
       gnome-keyring.enable = true;
@@ -17,11 +20,6 @@
 
     sysprof.enable = true;
 
-    xserver = {
-      enable = true;
-      desktopManager.gnome.enable = true;
-      displayManager.gdm.enable = true;
-    };
   };
 
   environment = {
