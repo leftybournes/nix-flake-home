@@ -77,10 +77,6 @@
       alsa.support32Bit = true;
       wireplumber.enable = true;
     };
-
-    xserver = {
-      enable = true;
-    };
   };
 
   users.users.${user} = {
