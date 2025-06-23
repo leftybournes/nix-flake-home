@@ -7,7 +7,6 @@
 
 {
   services = {
-    dbus.packages = with pkgs; [ gnome2.GConf ];
     udev.packages = with pkgs; [ gnome-settings-daemon ];
 
     desktopManager.gnome.enable = true;
