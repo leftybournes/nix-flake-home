@@ -202,7 +202,6 @@
       blueprint-compiler
       dart-sass
       deno
-      devenv
       emacs30-pgtk
       gcc
       gnumake
