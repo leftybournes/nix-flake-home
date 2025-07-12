@@ -197,7 +197,7 @@
       swiftPackages.swiftpm
       sourcekit-lsp
 
-      # other dev tools
+      # other tools
       act
       blueprint-compiler
       dart-sass
@@ -205,6 +205,7 @@
       emacs30-pgtk
       gcc
       gnumake
+      jq
       nodejs_24
       pkg-config
     ];
