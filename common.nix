@@ -96,7 +96,9 @@
     description = "${username}";
     extraGroups = [
       "adbusers"
+      "lp"
       "networkmanager"
+      "scanner"
       "wheel"
       "${user}"
     ];
@@ -124,6 +126,12 @@
     graphics = {
       enable32Bit = true;
       extraPackages = with pkgs; [ amdvlk ];
+    };
+
+    sane = {
+      enable = true;
+
+      extraBackends = [ pkgs.hplipWithPlugin ];
     };
   };
 
