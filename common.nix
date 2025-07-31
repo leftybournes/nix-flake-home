@@ -18,6 +18,13 @@
     extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
   };
 
+  nixpkgs.config = {
+    allowUnfree = true;
+    allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+      "hplipWithPlugin"
+    ];
+  };
+      
   networking = {
     networkmanager.enable = true;
 
@@ -76,6 +83,11 @@
       alsa.enable = true;
       alsa.support32Bit = true;
       wireplumber.enable = true;
+    };
+
+    printing = {
+      enable = true;
+      drivers = [ pkgs.hplipWithPlugin ];
     };
   };
 
