@@ -53,9 +53,9 @@
 
           modules = [
             ./common.nix
-            ./docker.nix
-            ./gnome.nix
+            ./cosmic.nix
             ./flatpak.nix
+            ./podman.nix
             ./hosts/endor
           ] ++ nixpkgs.lib.optional (builtins.pathExists ./extrahosts.nix) ./extrahosts.nix;
         };
