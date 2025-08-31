@@ -222,10 +222,11 @@
       blueprint-compiler
       dart-sass
       deno
-      emacs30-pgtk
+      emacs-pgtk
       gcc
       gnumake
       jq
+      ledger
       nodejs_24
       pkg-config
     ];
