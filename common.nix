@@ -202,7 +202,6 @@
       # ruby
       ruby_3_4
       rubyPackages_3_4.solargraph
-      rubyPackages_3_4.psych
       rubyPackages_3_4.rubocop
 
       # rust
