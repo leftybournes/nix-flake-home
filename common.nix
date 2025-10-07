@@ -125,7 +125,6 @@
   hardware = {
     graphics = {
       enable32Bit = true;
-      extraPackages = with pkgs; [ amdvlk ];
     };
 
     sane = {
@@ -136,7 +135,6 @@
   };
 
   environment = {
-    variables.AMD_VULKAN_ICD = "RADV";
     shells = with pkgs; [
       fish
       bash
