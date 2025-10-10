@@ -221,6 +221,7 @@
       deno
       emacs-pgtk
       gcc
+      ghostty
       gnumake
       jq
       ledger
