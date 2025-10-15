@@ -119,6 +119,7 @@
     packages = with pkgs; [
       cantarell-fonts
       source-code-pro
+      inter
     ];
   };
 
