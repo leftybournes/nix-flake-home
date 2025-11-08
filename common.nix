@@ -172,7 +172,7 @@
 
       # elixir
       elixir
-      elixir_ls
+      elixir-ls
 
       # libraries
       libheif
