@@ -210,11 +210,6 @@
       rustfmt
       rust-analyzer
 
-      # swift
-      swift
-      swiftPackages.swiftpm
-      sourcekit-lsp
-
       # other tools
       act
       blueprint-compiler
