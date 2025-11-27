@@ -91,26 +91,30 @@
     };
   };
 
-  users.users.${user} = {
-    isNormalUser = true;
-    description = "${username}";
-    extraGroups = [
-      "adbusers"
-      "lp"
-      "networkmanager"
-      "scanner"
-      "wheel"
-      "${user}"
-    ];
-    shell = pkgs.fish;
+  users = {
+    groups.libvirtd.members = ["${user}"];
+    users.${user} = {
+      isNormalUser = true;
+      description = "${username}";
+      extraGroups = [
+        "adbusers"
+        "lp"
+        "networkmanager"
+        "scanner"
+        "wheel"
+        "${user}"
+      ];
+      shell = pkgs.fish;
+    };
   };
 
   programs = {
     adb.enable = true;
     dconf.enable = true;
     fish.enable = true;
-    seahorse.enable = true;
     nix-ld.enable = true;
+    seahorse.enable = true;
+    virt-manager.enable = true;
   };
 
   fonts = {
@@ -227,6 +231,8 @@
 
   virtualisation = {
     containers.enable = true;
+    libvirtd.enable = true;
+    spiceUSBRedirection.enable = true;
     waydroid.enable = true;
   };
 
