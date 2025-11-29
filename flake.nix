@@ -38,28 +38,6 @@
           ] ++ nixpkgs.lib.optional (builtins.pathExists ./extrahosts.nix) ./extrahosts.nix;
         };
 
-        endor = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit (nixpkgs) lib;
-            inherit
-              inputs
-              nixpkgs
-              user
-              username
-              ;
-          };
-
-          inherit system;
-
-          modules = [
-            ./common.nix
-            ./cosmic.nix
-            ./flatpak.nix
-            ./podman.nix
-            ./hosts/endor
-          ] ++ nixpkgs.lib.optional (builtins.pathExists ./extrahosts.nix) ./extrahosts.nix;
-        };
-
         executor = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit (nixpkgs) lib;
