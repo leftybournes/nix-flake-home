@@ -129,6 +129,7 @@
 
   hardware = {
     graphics = {
+      enable = true;
       enable32Bit = true;
     };
 
@@ -227,7 +228,12 @@
       nodejs_24
       pkg-config
     ];
+
+    variables = {
+      AMD_VULKAN_ICD = "RADV";
+    };
   };
+
 
   virtualisation = {
     containers.enable = true;
