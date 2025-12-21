@@ -77,6 +77,11 @@
     pulseaudio.enable = false;
     tailscale.enable = true;
 
+    ollama = {
+      enable = true;
+      package = pkgs.ollama-vulkan;
+    };
+
     pipewire = {
       enable = true;
       pulse.enable = true;
