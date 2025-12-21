@@ -174,7 +174,7 @@
 
       # database tools
       mariadb_114
-      postgresql
+      postgresql_18
       sqlite
 
       # theme
