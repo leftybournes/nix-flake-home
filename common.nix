@@ -212,11 +212,6 @@
       python313Packages.pip
       python313Packages.jedi-language-server
 
-      # ruby
-      ruby_3_4
-      rubyPackages_3_4.solargraph
-      rubyPackages_3_4.rubocop
-
       # rust
       cargo
       clippy
