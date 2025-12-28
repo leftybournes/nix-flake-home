@@ -165,6 +165,7 @@
       imagemagick
       neovim
       nixfmt-rfc-style
+      nixfmt-tree
       ripgrep
       unzip
       wget
