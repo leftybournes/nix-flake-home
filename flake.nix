@@ -35,7 +35,8 @@
             ./flatpak.nix
             ./hosts/death-star
             ./podman.nix
-          ] ++ nixpkgs.lib.optional (builtins.pathExists ./extrahosts.nix) ./extrahosts.nix;
+          ]
+          ++ nixpkgs.lib.optional (builtins.pathExists ./extrahosts.nix) ./extrahosts.nix;
         };
 
         executor = nixpkgs.lib.nixosSystem {
@@ -57,7 +58,8 @@
             ./gnome.nix
             ./hosts/executor
             ./podman.nix
-          ] ++ nixpkgs.lib.optional (builtins.pathExists ./extrahosts.nix) ./extrahosts.nix;
+          ]
+          ++ nixpkgs.lib.optional (builtins.pathExists ./extrahosts.nix) ./extrahosts.nix;
         };
       };
     };

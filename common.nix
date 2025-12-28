@@ -20,11 +20,13 @@
 
   nixpkgs.config = {
     allowUnfree = true;
-    allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-      "hplipWithPlugin"
-    ];
+    allowUnfreePredicate =
+      pkg:
+      builtins.elem (lib.getName pkg) [
+        "hplipWithPlugin"
+      ];
   };
-      
+
   networking = {
     networkmanager.enable = true;
 
@@ -97,7 +99,7 @@
   };
 
   users = {
-    groups.libvirtd.members = ["${user}"];
+    groups.libvirtd.members = [ "${user}" ];
     users.${user} = {
       isNormalUser = true;
       description = "${username}";
@@ -237,7 +239,6 @@
       AMD_VULKAN_ICD = "RADV";
     };
   };
-
 
   virtualisation = {
     containers.enable = true;
