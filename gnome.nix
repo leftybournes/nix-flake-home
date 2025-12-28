@@ -18,7 +18,6 @@
     };
 
     sysprof.enable = true;
-
   };
 
   environment = {
