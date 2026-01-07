@@ -14,8 +14,9 @@
       efi.canTouchEfiVariables = true;
     };
 
-    plymouth.enable = true;
     extraModulePackages = with config.boot.kernelPackages; [ v4l2loopback ];
+    kernelPackages = pkgs.linuxPackages_latest;
+    plymouth.enable = true;
   };
 
   nixpkgs.config = {
@@ -247,7 +248,7 @@
     waydroid.enable = true;
   };
 
-  system.stateVersion = "25.05";
+  system.stateVersion = "25.11";
 
   nix = {
     gc = {
