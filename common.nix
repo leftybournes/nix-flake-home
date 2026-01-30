@@ -119,10 +119,8 @@
 
   programs = {
     adb.enable = true;
-    dconf.enable = true;
     fish.enable = true;
     nix-ld.enable = true;
-    seahorse.enable = true;
     virt-manager.enable = true;
   };
 
@@ -130,7 +128,7 @@
     fontDir.enable = true;
 
     packages = with pkgs; [
-      cantarell-fonts
+      adwaita-fonts
       source-code-pro
       inter
     ];
@@ -181,9 +179,6 @@
       mariadb_114
       postgresql_18
       sqlite
-
-      # theme
-      adw-gtk3
 
       # static site generators
       hugo

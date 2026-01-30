@@ -6,20 +6,6 @@
 }:
 
 {
-  services = {
-    udev.packages = with pkgs; [ gnome-settings-daemon ];
-
-    desktopManager.gnome.enable = true;
-    displayManager.gdm.enable = true;
-
-    gnome = {
-      core-developer-tools.enable = true;
-      gnome-keyring.enable = true;
-    };
-
-    sysprof.enable = true;
-  };
-
   environment = {
     gnome.excludePackages = with pkgs; [
       cheese
@@ -35,6 +21,7 @@
     ];
 
     systemPackages = with pkgs; [
+      adw-gtk3
       adwaita-icon-theme
       gnome-themes-extra
       gnome-tweaks
@@ -64,5 +51,24 @@
         1900
       ];
     };
+  };
+
+  programs = {
+    dconf.enable = true;
+    seahorse.enable = true;
+  };
+
+  services = {
+    udev.packages = with pkgs; [ gnome-settings-daemon ];
+
+    desktopManager.gnome.enable = true;
+    displayManager.gdm.enable = true;
+
+    gnome = {
+      core-developer-tools.enable = true;
+      gnome-keyring.enable = true;
+    };
+
+    sysprof.enable = true;
   };
 }
