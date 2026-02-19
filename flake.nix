@@ -35,8 +35,7 @@
             ./docker.nix
             ./flatpak.nix
             ./hosts/death-star
-          ]
-          ++ nixpkgs.lib.optional (builtins.pathExists ./extrahosts.nix) ./extrahosts.nix;
+          ];
         };
 
         executor = nixpkgs.lib.nixosSystem {
@@ -58,8 +57,7 @@
             ./flatpak.nix
             ./gnome.nix
             ./hosts/executor
-          ]
-          ++ nixpkgs.lib.optional (builtins.pathExists ./extrahosts.nix) ./extrahosts.nix;
+          ];
         };
       };
     };
