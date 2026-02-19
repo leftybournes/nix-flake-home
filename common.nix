@@ -31,7 +31,6 @@
   networking = {
     networkmanager.enable = true;
     nftables.enable = true;
-
     firewall = {
 
       # TCP Ports
@@ -65,6 +64,10 @@
           from = 1714;
           to = 1764;
         }
+      ];
+
+      trustedInterfaces = [
+        "virbr0"
       ];
     };
   };
