@@ -155,7 +155,6 @@
   };
 
   environment = {
-    etc.hosts.mode = "0600";
     shells = with pkgs; [
       fish
       bash
