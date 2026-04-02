@@ -32,9 +32,9 @@
           modules = [
             ./common.nix
             ./cosmic.nix
-            ./docker.nix
             ./flatpak.nix
             ./hosts/death-star
+            ./podman.nix
           ]
           ++ nixpkgs.lib.optional (builtins.pathExists ./extrahosts.nix) ./extrahosts.nix;
         };
