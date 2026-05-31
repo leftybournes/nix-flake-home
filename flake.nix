@@ -2,7 +2,7 @@
   description = "A flake for leftybournes' systems";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
   };
 
   outputs =
@@ -13,7 +13,7 @@
       username = "Anakin Skywalker";
     in
     {
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt;
 
       nixosConfigurations = {
         death-star = nixpkgs.lib.nixosSystem {
@@ -32,7 +32,6 @@
           modules = [
             ./common.nix
             ./cosmic.nix
-            ./flatpak.nix
             ./hosts/death-star
             ./podman.nix
           ]
@@ -55,7 +54,6 @@
           modules = [
             ./common.nix
             ./docker.nix
-            ./flatpak.nix
             ./gnome.nix
             ./hosts/executor
           ]

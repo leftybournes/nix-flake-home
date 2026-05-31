@@ -109,7 +109,6 @@
       isNormalUser = true;
       description = "${username}";
       extraGroups = [
-        "adbusers"
         "lp"
         "networkmanager"
         "scanner"
@@ -121,7 +120,6 @@
   };
 
   programs = {
-    adb.enable = true;
     fish.enable = true;
     nix-ld.enable = true;
     virt-manager.enable = true;
@@ -169,7 +167,7 @@
       git
       imagemagick
       neovim
-      nixfmt-rfc-style
+      nixfmt
       nixfmt-tree
       ripgrep
       unzip
@@ -223,6 +221,7 @@
       rust-analyzer
 
       # other tools
+      android-tools
       blueprint-compiler
       dart-sass
       deno
@@ -247,7 +246,7 @@
     waydroid.enable = true;
   };
 
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
 
   nix = {
     gc = {
