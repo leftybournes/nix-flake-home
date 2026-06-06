@@ -53,8 +53,8 @@
 
           modules = [
             ./common.nix
-            ./docker.nix
             ./gnome.nix
+            ./podman.nix
             ./hosts/executor
           ]
           ++ nixpkgs.lib.optional (builtins.pathExists ./extrahosts.nix) ./extrahosts.nix;
