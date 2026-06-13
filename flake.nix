@@ -3,17 +3,12 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
-    hermes-agent.url = "github:NousResearch/hermes-agent";
-    sops-nix.url = "github:Mic92/sops-nix";
-    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
     inputs@{
       self,
       nixpkgs,
-      hermes-agent,
-      sops-nix,
       ...
     }:
     let
@@ -33,17 +28,12 @@
               nixpkgs
               user
               username
-              hermes-agent
-              sops-nix
               ;
           };
 
           inherit system;
 
           modules = [
-            hermes-agent.nixosModules.default
-            sops-nix.nixosModules.sops
-
             ./hosts/death-star
 
             ./common.nix
@@ -62,17 +52,12 @@
               nixpkgs
               user
               username
-              hermes-agent
-              sops-nix
               ;
           };
 
           inherit system;
 
           modules = [
-            hermes-agent.nixosModules.default
-            sops-nix.nixosModules.sops
-
             ./hosts/executor
 
             ./common.nix
