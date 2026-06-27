@@ -236,9 +236,13 @@
 
   virtualisation = {
     containers.enable = true;
-    libvirtd.enable = true;
     spiceUSBRedirection.enable = true;
     waydroid.enable = true;
+
+    libvirtd = {
+      enable = true;
+      qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
+    };
   };
 
   system.stateVersion = "26.05";
