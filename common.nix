@@ -228,6 +228,7 @@
       ledger
       nodejs_24
       pkg-config
+      vue-language-server
     ];
 
     variables = {
