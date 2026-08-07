@@ -200,6 +200,7 @@
       php84
       php84Packages.composer
       php84Extensions.xdebug
+      php84Extensions.apcu
       phpactor
       phpunit
 
