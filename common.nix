@@ -118,6 +118,10 @@
     fish.enable = true;
     nix-ld.enable = true;
     virt-manager.enable = true;
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
   };
 
   fonts = {
