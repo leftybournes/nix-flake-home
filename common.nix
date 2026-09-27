@@ -205,7 +205,7 @@
       php84Packages.composer
       php84Extensions.xdebug
       php84Extensions.apcu
-      phpactor
+      phpantom-lsp
       phpunit
 
       # python
