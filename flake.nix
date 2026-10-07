@@ -8,65 +8,90 @@
   outputs =
     inputs@{
       self,
-      nixpkgs,
-      ...
+        nixpkgs,
+        ...
     }:
     let
       system = "x86_64-linux";
       user = "vader";
       username = "Anakin Skywalker";
     in
-    {
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt;
+      {
+        formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt;
 
-      nixosConfigurations = {
-        death-star = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit (nixpkgs) lib;
-            inherit
-              inputs
-              nixpkgs
-              user
-              username
+        nixosConfigurations = {
+          death-star = nixpkgs.lib.nixosSystem {
+            specialArgs = {
+              inherit (nixpkgs) lib;
+              inherit
+                inputs
+                nixpkgs
+                user
+                username
               ;
+            };
+
+            inherit system;
+
+            modules = [
+              ./hosts/death-star
+
+              ./common.nix
+              ./cosmic.nix
+              ./llm.nix
+              ./podman.nix
+              ./extrahosts.nix
+            ];
           };
 
-          inherit system;
-
-          modules = [
-            ./hosts/death-star
-
-            ./common.nix
-            ./cosmic.nix
-            ./llm.nix
-            ./podman.nix
-            ./extrahosts.nix
-          ];
-        };
-
-        executor = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit (nixpkgs) lib;
-            inherit
-              inputs
-              nixpkgs
-              user
-              username
+          executor = nixpkgs.lib.nixosSystem {
+            specialArgs = {
+              inherit (nixpkgs) lib;
+              inherit
+                inputs
+                nixpkgs
+                user
+                username
               ;
+            };
+
+            inherit system;
+
+            modules = [
+              ./hosts/executor
+
+              ./common.nix
+              ./gnome.nix
+              ./llm.nix
+              ./podman.nix
+              ./extrahosts.nix
+            ];
           };
 
-          inherit system;
+          resolute = nixpkgs.lib.nixosSystem {
+            specialArgs = {
+              inherit (nixpkgs) lib;
+              inherit
+                inputs
+                nixpkgs
+                user
+                username
+              ;
+            };
 
-          modules = [
-            ./hosts/executor
+            inherit system;
 
-            ./common.nix
-            ./gnome.nix
-            ./llm.nix
-            ./podman.nix
-            ./extrahosts.nix
-          ];
+            modules = [
+              ./hosts/resolute
+
+              ./common.nix
+              ./docker.nix
+              ./extrahosts.nix
+              ./llm.nix
+              ./plasma.nix
+              ./tuxedo.nix
+            ];
+          };
         };
       };
-    };
 }
