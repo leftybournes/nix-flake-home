@@ -40,8 +40,8 @@
             ./cosmic.nix
             ./llm.nix
             ./podman.nix
-          ]
-          ++ nixpkgs.lib.optional (builtins.pathExists ./extrahosts.nix) ./extrahosts.nix;
+            ./extrahosts.nix
+          ];
         };
 
         executor = nixpkgs.lib.nixosSystem {
@@ -64,8 +64,8 @@
             ./gnome.nix
             ./llm.nix
             ./podman.nix
-          ]
-          ++ nixpkgs.lib.optional (builtins.pathExists ./extrahosts.nix) ./extrahosts.nix;
+            ./extrahosts.nix
+          ];
         };
       };
     };
