@@ -11,6 +11,10 @@
       SSH_ASKPASS_REQUIRE = "prefer";
     };
 
+    plasma6.excludePackages = with pkgs.kdePackages; [
+      elisa
+    ];
+
     systemPackages = with pkgs; [
       kdePackages.kdeconnect-kde
       kdePackages.ksshaskpass
