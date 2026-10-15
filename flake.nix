@@ -87,8 +87,8 @@
               ./common.nix
               ./docker.nix
               ./extrahosts.nix
+              ./gnome.nix
               ./llm.nix
-              ./plasma.nix
               ./tuxedo.nix
             ];
           };
