@@ -224,7 +224,6 @@
       android-tools
       blueprint-compiler
       dart-sass
-      deno
       emacs-pgtk
       gcc
       gnumake
