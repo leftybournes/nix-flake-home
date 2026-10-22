@@ -7,7 +7,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    linuxPackages.tuxedo-drivers
+    linuxKernel.packages.linux_7_2.tuxedo-drivers
   ];
 
   hardware.tuxedo-rs = {
