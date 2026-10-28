@@ -161,7 +161,6 @@
       bottom
       chezmoi
       fd
-      flatpak-builder
       git
       imagemagick
       neovim
@@ -173,6 +172,10 @@
       wl-clipboard
       yt-dlp
       zip
+
+      # flatpak builder
+      flatpak-builder
+      appstream
 
       # database tools
       mariadb_114
