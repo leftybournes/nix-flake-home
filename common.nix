@@ -187,7 +187,7 @@
       zola
 
       # elixir
-      elixir
+      beam29Packages.elixir_1_20
       elixir-ls
 
       # libraries
