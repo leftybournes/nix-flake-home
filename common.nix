@@ -216,11 +216,7 @@
       python313Packages.jedi-language-server
 
       # rust
-      cargo
-      clippy
-      rustc
-      rustfmt
-      rust-analyzer
+      rustup
 
       # other tools
       android-tools
