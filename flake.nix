@@ -3,12 +3,17 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
     inputs@{
       self,
         nixpkgs,
+        nixos-hardware,
         ...
     }:
     let
@@ -89,7 +94,8 @@
               ./extrahosts.nix
               ./gnome.nix
               ./llm.nix
-              ./tuxedo.nix
+
+              nixos-hardware.nixosModules.tuxedo-infinitybook-pro14-gen10-amd
             ];
           };
         };
